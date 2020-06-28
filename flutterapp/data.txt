@@ -1,0 +1,63 @@
+BY STATE DEATHS
+https://www.cdc.gov/covid-data-tracker/Content/CoronaViewJson_01/US_MAP_DATA.csv
+
+Alabama
+Alaska
+https://opendata.arcgis.com/datasets/229d0e70971b4c7eb3e4d1a9f45fabd5_0.csv
+
+Arizona
+
+
+Arkansas
+
+
+
+California
+Colorado
+Connecticut
+Delaware
+Florida
+Georgia
+Hawaii
+Idaho
+IllinoisIndiana
+Iowa
+Kansas
+Kentucky
+Louisiana
+Maine
+Maryland
+Massachusetts
+Michigan
+Minnesota
+Mississippi
+Missouri
+MontanaNebraska
+Nevada
+New Hampshire
+New Jersey
+New Mexico
+New York
+North Carolina
+North Dakota
+Ohio
+Oklahoma
+Oregon
+PennsylvaniaRhode Island
+South Carolina
+South Dakota
+Tennessee
+Texas
+https://www.dshs.texas.gov/coronavirus/TexasCOVID19DailyCountyCaseCountData.xlsx
+https://www.dshs.texas.gov/coronavirus/TexasCOVID19DailyCountyFatalityCountData.xlsx
+https://www.dshs.texas.gov/coronavirus/TexasCOVID-19ActiveCaseDatabyCounty.xlsx
+https://www.dshs.texas.gov/coronavirus/TexasCOVID-19CumulativeTestsOverTimebyCounty.xlsx
+
+Utah
+Vermont
+Virginia
+Washington
+West Virginia
+Wisconsin
+WyominG
+

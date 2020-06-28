@@ -1,0 +1,25 @@
+{
+  "name": "covitracker",
+  "version": "1.0.0",
+  "description": "An app that tracks covid activity in your area in the US.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanZ-1-2-3-4/COVITracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanZ-1-2-3-4/COVITracker/issues"
+  },
+  "homepage": "https://github.com/IvanZ-1-2-3-4/COVITracker#readme",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "d3": "^5.16.0",
+    "d3-node": "^2.2.2",
+    "plotly": "^1.0.6"
+  }
+}

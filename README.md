@@ -16,3 +16,7 @@ Alerts if cases are rapidly growing.
 DATA SOURCES:
 Number of cases in county / city
 
+
+TODO:
+Figure out where to get data, compile list of links that are updated with fresh data
+Figure out how to draw graphs 
