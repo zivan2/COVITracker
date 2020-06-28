@@ -8,10 +8,11 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "name": "Launch index.html",
-            "file": "${workspaceFolder}/index.html"
+            "name": "Launch localhost",
+            "url": "http://localhost:8000/index.html",
+            "webRoot": "${workspaceFolder}"
         }
-
         
+     
     ]
 }

@@ -3,34 +3,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="Chart.min.js"></script>
     <script>
-    fetch('https://covidtracking.com/api/v1/states/' + stateName + '/daily.json').then(resp => {
-        resp.json().then((data) => {
-            for (let i = 0; i < data.length; i++) {
-                let date = data[i].date.toString();
-                data[i].date = {
-                    year: date.substring(0, 4),
-                    month: date.substring(4, 6),
-                    day: date.substr(6, 8)
-                };
-                let plotData = [];
-                for (let i = 0; i < data.length; i++) {
-                    plotData.x.push({
-                        x: i+1,
-                        y: data[i].positive
-                    });
+        function Graph(graphX, graphY, label, data) {
+            return {
+                type: "scatter",
+                data: {
+                    datasets: [{
+                        label: label,
+                        data: data,
+                        pointBackgroundColor: "rgba(0,0,0,1)"
+                    }]
+                },
+                options: {
+                    hover: {
+                        animationDuration: 0
+                    },
+                    responsive:true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: graphY
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: graphX
+                            }
+                        }]
+                    }
                 }
-                let graphX = 'time', graphY = 'cases';
-                const context = document.getElementById("chart");
-                let chart = new Chart(
-                    context, new Graph(graphX, graphY, `${graphY} against ${graphX}`, plotData)
-                );
-            }
-        }).catch(err => console.error(err));
-    });
+            };
+        }
+        let stateName = 'ca';
+        fetch('https://covidtracking.com/api/v1/states/' + stateName + '/daily.json').then(resp => {
+            resp.json().then((data) => {
+                for (let i = 0; i < data.length; i++) {
+                    let date = data[i].date.toString();
+                    data[i].date = {
+                        year: date.substring(0, 4),
+                        month: date.substring(4, 6),
+                        day: date.substr(6, 8)
+                    };
+                    let plotData = [];
+                    for (let i = 0; i < data.length; i++) {
+                        plotData.push({
+                            x: i+1,
+                            y: data[i].positive
+                        });
+                    }
+                    let graphX = 'time', graphY = 'cases';
+                    const context = document.getElementById("chart");
+                    let chart = new Chart(
+                        context, new Graph(graphX, graphY, `${graphY} against ${graphX}`, plotData)
+                    );
+                }
+            }).catch(err => console.error(err));
+        });
     </script>
 </head>
 <body>
-    <canvas id="chart" class="chart"></canvas>
+    <div style="width: 50em; height: 50em;">
+        <canvas id="chart" class="chart"></canvas>
+    </div>
 </body>
 </html>
