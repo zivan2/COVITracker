@@ -18,7 +18,7 @@
   "homepage": "https://github.com/IvanZ-1-2-3-4/COVITracker#readme",
   "dependencies": {
     "canvas": "^2.6.1",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "d3": "^5.16.0",
     "d3-node": "^2.2.2",
     "plotly": "^1.0.6"
